@@ -86,11 +86,7 @@ class ViewPaymentsGUI:
 
 def Backfun():
     ViewPaymentsGUI.destroy()
-    from Student_Activities_GUI import StudentActivitiesGUI
-    StudentActivities = tk.Tk()
-    studentactivities = StudentActivitiesGUI(StudentActivities)
-    StudentActivities.mainloop()
-
+    import Student_Activities_GUI
 
 ViewPaymentForm = Tk()
 viewpaymentsform = ViewPaymentsGUI(ViewPaymentForm)

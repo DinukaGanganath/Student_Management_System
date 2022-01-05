@@ -82,10 +82,7 @@ class ViewLecturesGUI:
 
 def Backfun():
     ViewLectures.destroy()
-    from Student_Activities_GUI import StudentActivitiesGUI
-    StudentActivities = tk.Tk()
-    studentactivities = StudentActivitiesGUI(StudentActivities)
-    StudentActivities.mainloop()
+    import Student_Activities_GUI
 
 ViewLectures = Tk()
 viewlectures = ViewLecturesGUI(ViewLectures)

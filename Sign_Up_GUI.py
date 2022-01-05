@@ -161,10 +161,7 @@ class SignUpGUI:
 
 def GoLogInPage():
     SignUp.destroy()
-    from Log_In_GUI import LogInGUI
-    root = tk.Tk()
-    logingui = LogInGUI(root)
-    root.mainloop()
+    import Log_In_GUI
 
 SignUp = tk.Tk()
 signup = SignUpGUI(SignUp)

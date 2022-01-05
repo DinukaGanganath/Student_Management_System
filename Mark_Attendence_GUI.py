@@ -143,10 +143,7 @@ class MarkAttendenceGUI:
 
 def Backfun():
     MarkAttendence.destroy()
-    from Lecturer_Activities_GUI import LecturerActivitiesGUI
-    LecturerActivities = tk.Tk()
-    lectureractivities = LecturerActivitiesGUI(LecturerActivities)
-    LecturerActivities.mainloop()
+    import Lecturer_Activities_GUI
 
 MarkAttendence = Tk()
 markattendence = MarkAttendenceGUI(MarkAttendence)

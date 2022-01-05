@@ -1,8 +1,6 @@
 from tkinter import Tk, Button, Checkbutton, Entry, Label, messagebox, PhotoImage, Frame, Radiobutton, IntVar
 import tkinter as tk
 import tkinter.font as font
-from DataBase import Students, Lecturers
-from uuid import uuid1
 
 class LecturerActivitiesGUI:
 
@@ -36,24 +34,15 @@ class LecturerActivitiesGUI:
         
 def AddLecFun():
     LecturerActivities.destroy()
-    from Add_Lecture_GUI import AddLectureGUI
-    LectureForm = tk.Tk()
-    addlecture = AddLectureGUI(LectureForm)
-    LectureForm.mainloop()
+    import Add_Lecture_GUI
 
 def MarkAttFun():
     LecturerActivities.destroy()
-    from Mark_Attendence_GUI import MarkAttendenceGUI
-    MarkAttendence = tk.Tk()
-    markattendence = MarkAttendenceGUI(MarkAttendence)
-    MarkAttendence.mainloop()
+    import Mark_Attendence_GUI
 
 def LogOutFun():
     LecturerActivities.destroy()
-    from Log_In_GUI import LogInGUI
-    LogIn = tk.Tk()
-    login = LogInGUI(LogIn)
-    LogIn.mainloop()
+    import Log_In_GUI
 
 LecturerActivities = tk.Tk()
 lectureractivities = LecturerActivitiesGUI(LecturerActivities)

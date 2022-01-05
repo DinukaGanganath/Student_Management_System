@@ -47,59 +47,38 @@ class AdminActivitiesGUI:
 
 def AddLecFun():
     AdminActivities.destroy()
-    from Lecturer_Information_GUI import LecturerInformationGUI
-    LecturerForm = tk.Tk()
-    lecturerinformation = LecturerInformationGUI(LecturerForm)
-    LecturerForm.mainloop()
+    import Lecturer_Information_GUI
 
 def AddStuFun():
     AdminActivities.destroy()
-    from Student_Information_GUI import StudentInformationGUI
-    StudentForm = tk.Tk()
-    studentinformation = StudentInformationGUI(StudentForm)
-    StudentForm.mainloop()
+    import Student_Information_GUI
 
 def EditLecFun():
     AdminActivities.destroy()
-    from Lecturer_Edit_GUI import EditLecturerGUI
-    LecturerEditForm = tk.Tk()
-    editlecturer = EditLecturerGUI(LecturerEditForm)
-    LecturerEditForm.mainloop()
+    import Lecturer_Edit_GUI
 
 def EditStuFun():
     AdminActivities.destroy()
-    from Student_Edit_GUI import EditStudentGUI
-    StudentEditForm = tk.Tk()
-    editstudent = EditStudentGUI(StudentEditForm)
-    StudentEditForm.mainloop()
+    import Student_Edit_GUI
+    #StudentEditForm = tk.Tk()
+    #editstudent = EditStudentGUI(StudentEditForm)
+    #StudentEditForm.mainloop()
 
 def RemoveLecFun():
     AdminActivities.destroy()
-    from Remove_Lecturer_GUI import RemoveLecturerGUI
-    LecturerRemoveForm = tk.Tk()
-    removestudent = RemoveLecturerGUI(LecturerRemoveForm)
-    LecturerRemoveForm.mainloop()
+    import Remove_Lecturer_GUI
 
 def RemoveStuFun():
     AdminActivities.destroy()
-    from Remove_Student_GUI import RemoveStudentGUI
-    StudentRemoveForm = tk.Tk()
-    removestudent = RemoveStudentGUI(StudentRemoveForm)
-    StudentRemoveForm.mainloop()
+    import Remove_Student_GUI
 
 def PaymentsFun():
     AdminActivities.destroy()
-    from Make_payments_GUI import MakePaymentGUI
-    MakePayment = tk.Tk()
-    makepayment = MakePaymentGUI(MakePayment)
-    MakePayment.mainloop()
+    import Make_payments_GUI
 
 def LogOutFun():
     AdminActivities.destroy()
-    from Log_In_GUI import LogInGUI
-    LogIn = tk.Tk()
-    login = LogInGUI(LogIn)
-    LogIn.mainloop()
+    import Log_In_GUI
 
 AdminActivities = tk.Tk()
 adminactivities = AdminActivitiesGUI(AdminActivities)

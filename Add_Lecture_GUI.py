@@ -129,10 +129,7 @@ class AddLectureGUI:
 def BackFun():
 
     LectureForm.destroy()
-    from Lecturer_Activities_GUI import LecturerActivitiesGUI
-    LecturerActivities = tk.Tk()
-    lectureractivities = LecturerActivitiesGUI(LecturerActivities)
-    LecturerActivities.mainloop()
+    import Lecturer_Activities_GUI
 
 LectureForm = Tk()
 addlecture = AddLectureGUI(LectureForm) 

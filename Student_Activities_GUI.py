@@ -1,8 +1,6 @@
 from tkinter import Tk, Button, Checkbutton, Entry, Label, messagebox, PhotoImage, Frame, Radiobutton, IntVar
 import tkinter as tk
 import tkinter.font as font
-from DataBase import Students, Lecturers
-from uuid import uuid1
 
 class StudentActivitiesGUI:
 
@@ -28,7 +26,11 @@ class StudentActivitiesGUI:
         self.title.place(x= 200, y = 10)
 
         self.ShowLec = tk.Button(self.frame, text = "Show the Lectures", width = 20, height = 1, fg = 'red4', bg = 'navajo white', font = self.ButtonFont, command = ShowLecFun)
-        self.ShowLec.place(x = 250, y = 250)
+        self.ShowLec.place(x = 40, y = 250)
+
+        self.Showpay = tk.Button(self.frame, text="Show the Payments", width=20, height=1, fg='red4', bg='navajo white',
+                                 font=self.ButtonFont, command=ShowPayFun)
+        self.Showpay.place(x=450, y=250)
         
         
         self.LogOut = tk.Button(self.frame, text = "Log out", width = 7, height = 1, fg = 'red4', bg = 'navajo white', font = self.SmallFont, command = LogOutFun )
@@ -36,17 +38,15 @@ class StudentActivitiesGUI:
         
 def ShowLecFun():
     StudentActivities.destroy()
-    from View_Lectures import ViewLecturesGUI
-    ViewLectures = Tk()
-    viewlectures = ViewLecturesGUI(ViewLectures)
-    ViewLectures.mainloop()
+    import View_Lectures
 
 def LogOutFun():
     StudentActivities.destroy()
-    from Log_In_GUI import LogInGUI
-    LogIn = tk.Tk()
-    logingui = LogInGUI(LogIn)
-    LogIn.mainloop()
+    import Log_In_GUI
+
+def ShowPayFun():
+    StudentActivities.destroy()
+    import View_Payments
 
 StudentActivities = tk.Tk()
 studentactivities = StudentActivitiesGUI(StudentActivities)

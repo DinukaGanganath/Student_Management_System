@@ -133,10 +133,7 @@ class LecturerInformationGUI:
 
 def Backfun():
     LecturerForm.destroy()
-    from Admin_Activities_GUI import AdminActivitiesGUI
-    AdminActivities = tk.Tk()
-    adminactivities = AdminActivitiesGUI(AdminActivities)
-    AdminActivities.mainloop()
+    import Admin_Activities_GUI
 
 LecturerForm = Tk()
 InsertLecturer = LecturerInformationGUI(LecturerForm) 

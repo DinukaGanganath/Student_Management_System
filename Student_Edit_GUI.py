@@ -151,10 +151,7 @@ class EditStudentGUI:
 
 def Backfun():
     EditStudentForm.destroy()
-    from Admin_Activities_GUI import AdminActivitiesGUI
-    AdminActivities = tk.Tk()
-    adminactivities = AdminActivitiesGUI(AdminActivities)
-    AdminActivities.mainloop()
+    import Admin_Activities_GUI
 
 EditStudentForm = Tk()
 editstudentform = EditStudentGUI(EditStudentForm)

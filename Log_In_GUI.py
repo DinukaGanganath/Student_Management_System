@@ -124,19 +124,12 @@ class LogInGUI:
         elif self.var.get() == 2 and self.checkEquality():
             messagebox.showinfo("Student Login", "Login Successfully as a student!")
             LogIn.destroy()
-            from Student_Activities_GUI import StudentActivitiesGUI
-            root = tk.Tk()
-            studentactivity = StudentActivitiesGUI(root)
-            root.mainloop()
+            import Student_Activities_GUI
 
         elif self.var.get() == 3 and self.checkEquality():
             messagebox.showinfo("Lecturer Login", "Login Successfully as a lecturer!")
             LogIn.destroy()
-            from Lecturer_Activities_GUI import LecturerActivitiesGUI
-            root = tk.Tk()
-            lecactivity = LecturerActivitiesGUI(root)
-            root.mainloop()
-            LogIn.mainloop()
+            import Lecturer_Activities_GUI
 
     def AdminLogIn(self):
         password = "12345"
@@ -145,10 +138,7 @@ class LogInGUI:
             messagebox.showinfo("Admin Login", "Login Successful !")
             
             LogIn.destroy()
-            from Admin_Activities_GUI import AdminActivitiesGUI
-            AdminActivities = tk.Tk()
-            adminactivities = AdminActivitiesGUI(AdminActivities)
-            AdminActivities.mainloop()
+            import Admin_Activities_GUI
 
         else :
             messagebox.showwarning("Wrong Information !", "ID Number and Password you entered is wrong.")
@@ -160,10 +150,7 @@ class LogInGUI:
 
 def SignUpSection():
     LogIn.destroy()
-    from Sign_Up_GUI import SignUpGUI
-    root = tk.Tk()
-    signup = SignUpGUI(root)
-    root.mainloop()
+    import Sign_Up_GUI
 
 LogIn = tk.Tk()
 Login = LogInGUI(LogIn)
